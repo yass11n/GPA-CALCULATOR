@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialogbg">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/round_remove_24"
+        android:layout_gravity="center|top"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/createText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="viewStart"
+            android:text="Quick Action"
+            android:padding="8dp"
+            android:textColor="@color/lavender"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:textSize="25dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/clear_icon"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="8dp"
+            android:id="@+id/cancelButton"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutcourse"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_icon_colored"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add course"
+            android:textColor="@color/lavender"
+            android:layout_marginLeft="30dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/accordion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/semester1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="semester 1"
+                android:background="@drawable/spinner_bg"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:id="@+id/semester2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="semester 2"
+                android:background="@drawable/spinner_bg"
+                android:layout_marginBottom="10dp"/>
+            <Button
+                android:id="@+id/summerCourse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="summer course"
+                android:background="@drawable/spinner_bg"
+                android:layout_marginBottom="10dp"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <FrameLayout
+                    android:id="@+id/form_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp">
+                            <TextView
+                                android:id="@+id/message"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12dp"
+                                android:layout_marginBottom="10dp"
+                                />
+                            <TextView
+                                android:id="@+id/semester"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="18dp"
+                                android:textColor="@color/lavender"
+                                android:layout_marginBottom="10dp"
+                                />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/courseCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Course code"
+                            android:background="@drawable/border"
+                            android:inputType="text"
+                            android:layout_marginBottom="10dp"/>
+
+                        <EditText
+                            android:id="@+id/courseName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Course name"
+                            android:background="@drawable/border"
+                            android:inputType="text"
+                            android:layout_marginBottom="10dp"/>
+
+                        <EditText
+                            android:id="@+id/courseHoures"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Credit Houres"
+                            android:background="@drawable/border"
+                            android:inputType="number"
+                            android:layout_marginBottom="10dp"/>
+
+                        <EditText
+                            android:id="@+id/courseYear"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Course Year"
+                            android:background="@drawable/border"
+                            android:inputType="number"
+                            android:layout_marginBottom="10dp"/>
+
+                        <Spinner
+                            android:id="@+id/courseGPA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_bg"
+                            android:padding="10dp"
+                            android:entries="@array/spinner_gpa"
+                            android:layout_marginBottom="30dp"
+                            />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="20dp">
+
+                            <Button
+                                android:id="@+id/updateCourse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/btn_second_bg"
+                                android:text="update Course"
+                                android:textColor="@color/lavender" />
+
+                            <Button
+                                android:id="@+id/addCourse"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:text="Add Course"
+                                app:icon="@drawable/add_icon"
+                                android:background="@drawable/btn_bg"/>
+
+
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+
+                </FrameLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

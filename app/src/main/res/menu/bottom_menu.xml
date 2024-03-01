@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home_icon"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile_icon"/>
+
+    <item
+        android:title=""
+      />
+
+    <item
+        android:id="@+id/calc"
+        android:title="GPA"
+        android:icon="@drawable/calc_icon"/>
+
+    <item
+        android:id="@+id/status"
+        android:title="Status"
+        android:icon="@drawable/status_icon"/>
+
+</menu>
